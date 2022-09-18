@@ -1,0 +1,19 @@
+server:
+  port: 5000
+spring:
+  datasource:
+    username: username
+    password: password
+    url: jdbc:mysql://192.168.1.1:3305/test_db?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  # 搜索指定包别名
+  typeAliasesPackage: com.fish.**.mapper
+  mapperLocations: classpath*:mapper/*Mapper.xml
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    com.fish.mybatis.mapper: debug
