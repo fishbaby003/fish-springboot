@@ -1,0 +1,26 @@
+server:
+  port: 5001
+
+min:
+  io:
+    endpoint: http://192.168.1.1:9090
+    accessKey: admin
+    secretKey: admin11
+buckets:
+  name: img
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 15MB
+
+  datasource:
+    username: root
+    password: 111111
+    url: jdbc:mysql://192.168.1.1:3305/test_db?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  # 搜索指定包别名
+  typeAliasesPackage: com.fish.**.mapper
+  mapperLocations: classpath*:mapper/*Mapper.xml

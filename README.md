@@ -25,6 +25,7 @@
 
 - Springboot demos
     - [SpringBoot集成elasticsearch](elasticsearch/README.md)
+    - [SpringBoot集成分布式存储minio](minio/README.md)
     - [SpringBoot集成MyBatis](mybatis/README.md)
     
     - ~~SpringBoot集成JPA~~
