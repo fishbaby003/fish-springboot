@@ -55,6 +55,7 @@
     </dependencies>
 
     <modules>
+        <module>elasticsearch</module>
         <module>mybatis</module>
     </modules>
     <packaging>pom</packaging>

@@ -12,7 +12,7 @@
 分库分表 | sharding-jdbc、mycat
 缓存  | Redis
 数据库  | Mysql、postgresql、Oracle
-消息队列  | Rabbitmq 、kafka、ROcketMQ
+消息队列  | Rabbitmq 、kafka、RocketMQ
 搜索引擎  | ES
 非关系数据库  | MongoDB
 注册中心  | nacos
