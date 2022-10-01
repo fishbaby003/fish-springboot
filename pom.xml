@@ -56,8 +56,12 @@
 
     <modules>
         <module>elasticsearch</module>
+        <module>feign</module>
         <module>minio</module>
+        <module>mongodb</module>
         <module>mybatis</module>
+        <module>redis</module>
+        <module>sharding-jdbc</module>
     </modules>
     <packaging>pom</packaging>
     <build>

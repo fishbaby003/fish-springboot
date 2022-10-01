@@ -25,7 +25,25 @@
 
 - Springboot demos
     - [SpringBoot集成elasticsearch](elasticsearch/README.md)
+    
+    使用springboot、jpa、mysql、elasticsearch技术
+    - [SpringBoot单独集成feign](feign/README.md)
+    
+    使用springboot、feign技术
     - [SpringBoot集成分布式存储minio](minio/README.md)
+    
+    使用springboot、mybatis、mysql、minio、knife4j技术
+    - [SpringBoot集成mongodb](mongodb/README.md)
+    
+    使用springboot、mongodb、smart-doc技术
     - [SpringBoot集成MyBatis](mybatis/README.md)
     
+     使用springboot、mybatis、mysql、logging技术
+    - [SpringBoot集成分布式锁redis](redis/README.md)
+    
+     使用springboot、redis分布式锁技术
+    - [SpringBoot集成sharding-jdbc](sharding-jdbc/README.md)
+    
+     使用springboot、mybatis、mysql、logging、sharding-jdbc分布式锁技术
+     
     - ~~SpringBoot集成JPA~~
