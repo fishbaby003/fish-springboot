@@ -183,3 +183,5 @@ ds0和ds1中分别连接test_order和order2库
 
 
 ![image-20221002162028368](../img/image-20221002162028368.png)
+
+github地址：[fishbaby003/fish-springboot: fish-springboot 一个以 springboot 为基础开发框架， 整合 Redis 、mybatis 、jpa 、Mysql 、postgresql 、oracle 、 Rabbitmq 、 RocketMQ 、ES 、MongoDB、sharding-jdbc 分库分表、nacos 、knife4j、smart-doc 、cas 等互联网主流技术， 文章图解理论配合实战案例，实现开发中常见功能点的综合项目。 本着拿来即用的原则，助力于减少开发者在工作中的学习成本。 (github.com)](https://github.com/fishbaby003/fish-springboot)
