@@ -56,11 +56,11 @@ CREATE TABLE `t_user1` (
 
 调用[localhost:5002/address/save](http://localhost:5002/address/save)接口生成t_address表数据，数据如下图所示：
 
-![image-20221002155916978](D:\xm\docment\md\img\image-20221002155916978.png)
+![image-20221002155916978](../img/image-20221002155916978.png)
 
 调用http://localhost:5002/address/get/21接口查询id=21的数据
 
-![image-20221002160029521](D:\xm\docment\md\img\image-20221002160029521.png)
+![image-20221002160029521](../img/image-20221002160029521.png)
 
 
 
@@ -68,15 +68,15 @@ CREATE TABLE `t_user1` (
 
 调用[localhost:5002/user/save](http://localhost:5002/user/save)接口生成t_user0、t_user1表数据，t_user0和t_user1分别存储了5条数据
 
-![image-20221002160205037](D:\xm\docment\md\img\image-20221002160205037.png)
+![image-20221002160205037](../img/image-20221002160205037.png)
 
-![image-20221002160227098](D:\xm\docment\md\img\image-20221002160227098.png)
+![image-20221002160227098](../img/image-20221002160227098.png)
 
 调用http://localhost:5002/user/get/{id}接口查询t_user0、t_user1表数据
 
-![image-20221002160432031](D:\xm\docment\md\img\image-20221002160432031.png)
+![image-20221002160432031](../img/image-20221002160432031.png)
 
-![image-20221002160451041](D:\xm\docment\md\img\image-20221002160451041.png)
+![image-20221002160451041](../img/image-20221002160451041.png)
 
 ## 2、分库分表模式
 
@@ -154,32 +154,32 @@ ds0和ds1中分别连接test_order和order2库
 
 调用[localhost:5003/address/save](http://localhost:5003/address/save)接口生成t_address表数据，此时两个库中分别生成数据如下图所示：
 
-![image-20221002161316933](D:\xm\docment\md\img\image-20221002161316933.png)
+![image-20221002161316933](../img/image-20221002161316933.png)
 
-![image-20221002161325059](D:\xm\docment\md\img\image-20221002161325059.png)
+![image-20221002161325059](../img/image-20221002161325059.png)
 
 
 
 调用http://localhost:5003/address/get/783364903309148160 接口查询id=783364903309148160的数据，查询的是order2库t_address表
 
-![image-20221002161447932](D:\xm\docment\md\img\image-20221002161447932.png)
+![image-20221002161447932](../img/image-20221002161447932.png)
 
 调用http://localhost:5003/address/get/783364904491941888 接口查询id=783364904491941888的数据，查询的是test_order库t_address表
 
-![image-20221002161654444](D:\xm\docment\md\img\image-20221002161654444.png)
+![image-20221002161654444](../img/image-20221002161654444.png)
 
 
 
 调用[localhost:5003/user/save](http://localhost:5003/user/save)接口生成test_order库t_user0和order2库t_user1表数据，t_user0和t_user1分别存储了5条数据
 
-![image-20221002161900716](D:\xm\docment\md\img\image-20221002161900716.png)
+![image-20221002161900716](../img/image-20221002161900716.png)
 
-![image-20221002161924281](D:\xm\docment\md\img\image-20221002161924281.png)
+![image-20221002161924281](../img/image-20221002161924281.png)
 
 调用http://localhost:5003/user/get/{id}接口查询t_user0、t_user1表数据
 
-![image-20221002162009377](D:\xm\docment\md\img\image-20221002162009377.png)
+![image-20221002162009377](../img/image-20221002162009377.png)
 
 
 
-![image-20221002162028368](D:\xm\docment\md\img\image-20221002162028368.png)
+![image-20221002162028368](../img/image-20221002162028368.png)
