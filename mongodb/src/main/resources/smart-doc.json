@@ -1,0 +1,17 @@
+{
+  "serverUrl": "http://127.0.0.1:8080", //服务器地址,非必须。导出postman建议设置成http://{{server}}方便直接在postman直接设置环境变量
+  "isStrict": false, //是否开启严格模式
+  "outPath": "src/main/resources/doc", //指定文档的输出路径,maven插件不需要，gradle插件必须
+  "packageFilters": "",//controller包过滤，多个包用英文逗号隔开
+  "projectName": "mongodb",//配置自己的项目名称
+  "appToken": "0fee190149b843b6a481635a123459a4", //torna平台appToken,@since 2.0.9 128
+  "appKey": "20201216788835302345618208",//torna平台对接appKey，torna 1.11.0版本后不再需要, @since 2.0.9,
+  "secret": "W.Z456789Q0UqujVxnfi@.I#V&tUUYZR",//torna平台secret，torna 1.11.0版本后不再需要，@since 2.0.9
+  "openUrl": "http://localhost:7700/api",//torna平台地址，填写自己的私有化部署地址@since 2.0.9
+  "debugEnvName":"测试环境", //torna测试环境
+  "replace": true,//推送torna时替换旧的文档
+  "debugEnvUrl":"http://127.0.0.1:8080",//torna
+  "tornaDebug": true,
+  "inlineEnum": true,
+  "skipTransientField": true
+}
