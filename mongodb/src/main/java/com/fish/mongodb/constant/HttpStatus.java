@@ -3,7 +3,7 @@ package com.fish.mongodb.constant;
 /**
  * 返回状态码
  * 
- * @author ruoyi
+ * @author fish
  */
 public class HttpStatus
 {

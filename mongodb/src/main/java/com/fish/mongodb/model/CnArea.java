@@ -25,12 +25,12 @@ public class CnArea {
      *父级行政代码
      */
     @Field(value = "parent_code")
-    private Integer parentCode;
+    private String parentCode;
     /**
      * 行政代码
      */
     @Field(value = "area_code")
-    private Integer areaCode;
+    private String areaCode;
     /**
      * 邮政编码
      */
@@ -62,9 +62,9 @@ public class CnArea {
     /**
      * 经度
      */
-    private BigDecimal lng;
+    private String lng;
     /**
      * 纬度
      */
-    private BigDecimal lat;
+    private String lat;
 }

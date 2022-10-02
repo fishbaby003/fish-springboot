@@ -6,7 +6,7 @@
     <meta name="generator" content="smart-doc">
     <title>mongodb</title>
     <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="AllInOne.css?v=1662296385254"/>
+    <link rel="stylesheet" href="AllInOne.css?v=1664713390547"/>
     
     <style>.literalblock pre, .listingblock pre:not(.highlight), .listingblock pre[class="highlight"], .listingblock pre[class^="highlight "], .listingblock pre.CodeRay, .listingblock pre.prettyprint {
         background: #f7f7f8;
@@ -89,7 +89,7 @@
                 <a class="anchor" href="#_1_1_新增中国行政地区"></a>
                 <a class="link" href="#_1_1_新增中国行政地区">1.1.&nbsp;新增中国行政地区</a>
             </h3>
-                <div class="paragraph"><p><strong>URL:</strong><a href="http://127.0.0.1:8080/addArea" class="bare">&nbsp;http://127.0.0.1:8080/addArea</a>
+                <div class="paragraph"><p><strong>URL:</strong><a href="http://192.168.31.201:8080/addArea" class="bare">&nbsp;http://192.168.31.201:8080/addArea</a>
                 </p></div>
                 <div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
                 <div class="paragraph"><p><strong>Author:</strong>&nbsp;fish</p></div>
@@ -132,7 +132,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">parentCode</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">父级行政代码</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -140,7 +140,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">areaCode</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">行政代码</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -196,7 +196,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">lng</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">经度</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -204,7 +204,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">lat</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">纬度</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -214,19 +214,19 @@
                 <div class="paragraph"><p><strong>Request-example:</strong></p></div>
                 <div class="listingblock">
                     <div class="content">
-                        <pre><code class="bash">curl -X POST -H 'Content-Type: application/json' -i http://127.0.0.1:8080/addArea --data '{
-  "id": 507,
-  "level": 108,
-  "parentCode": 742,
-  "areaCode": 487,
-  "zipCode": 278,
-  "cityCode": "79800",
-  "name": "jena.turner",
-  "shortName": "jena.turner",
-  "mergerName": "jena.turner",
-  "pinyin": "7heesf",
-  "lng": 677,
-  "lat": 69
+                        <pre><code class="bash">curl -X POST -H 'Content-Type: application/json' -i http://192.168.31.201:8080/addArea --data '{
+  "id": 191,
+  "level": 15,
+  "parentCode": "68891",
+  "areaCode": "68891",
+  "zipCode": 29,
+  "cityCode": "68891",
+  "name": "gerry.kessler",
+  "shortName": "gerry.kessler",
+  "mergerName": "gerry.kessler",
+  "pinyin": "yamyeo",
+  "lng": "38hvfg",
+  "lat": "vswfou"
 }'</code></pre>
                     </div>
                 </div>
@@ -242,7 +242,7 @@
                 <a class="anchor" href="#_1_2_批量新增中国行政地区"></a>
                 <a class="link" href="#_1_2_批量新增中国行政地区">1.2.&nbsp;批量新增中国行政地区</a>
             </h3>
-                <div class="paragraph"><p><strong>URL:</strong><a href="http://127.0.0.1:8080/addAreaList" class="bare">&nbsp;http://127.0.0.1:8080/addAreaList</a>
+                <div class="paragraph"><p><strong>URL:</strong><a href="http://192.168.31.201:8080/addAreaList" class="bare">&nbsp;http://192.168.31.201:8080/addAreaList</a>
                 </p></div>
                 <div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
                 <div class="paragraph"><p><strong>Author:</strong>&nbsp;fish</p></div>
@@ -285,7 +285,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">parentCode</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">父级行政代码</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -293,7 +293,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">areaCode</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">行政代码</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -349,7 +349,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">lng</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">经度</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -357,7 +357,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">lat</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">纬度</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -367,20 +367,20 @@
                 <div class="paragraph"><p><strong>Request-example:</strong></p></div>
                 <div class="listingblock">
                     <div class="content">
-                        <pre><code class="bash">curl -X POST -H 'Content-Type: application/json' -i http://127.0.0.1:8080/addAreaList --data '[
+                        <pre><code class="bash">curl -X POST -H 'Content-Type: application/json' -i http://192.168.31.201:8080/addAreaList --data '[
   {
-    "id": 467,
-    "level": 539,
-    "parentCode": 999,
-    "areaCode": 957,
-    "zipCode": 23,
-    "cityCode": "79800",
-    "name": "jena.turner",
-    "shortName": "jena.turner",
-    "mergerName": "jena.turner",
-    "pinyin": "yxwao1",
-    "lng": 641,
-    "lat": 141
+    "id": 183,
+    "level": 660,
+    "parentCode": "68891",
+    "areaCode": "68891",
+    "zipCode": 867,
+    "cityCode": "68891",
+    "name": "gerry.kessler",
+    "shortName": "gerry.kessler",
+    "mergerName": "gerry.kessler",
+    "pinyin": "s2wzko",
+    "lng": "r9kps5",
+    "lat": "5jm7p1"
   }
 ]'</code></pre>
                     </div>
@@ -397,7 +397,7 @@
                 <a class="anchor" href="#_1_3_更新中国行政地区"></a>
                 <a class="link" href="#_1_3_更新中国行政地区">1.3.&nbsp;更新中国行政地区</a>
             </h3>
-                <div class="paragraph"><p><strong>URL:</strong><a href="http://127.0.0.1:8080/updateArea" class="bare">&nbsp;http://127.0.0.1:8080/updateArea</a>
+                <div class="paragraph"><p><strong>URL:</strong><a href="http://192.168.31.201:8080/updateArea" class="bare">&nbsp;http://192.168.31.201:8080/updateArea</a>
                 </p></div>
                 <div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
                 <div class="paragraph"><p><strong>Author:</strong>&nbsp;fish</p></div>
@@ -440,7 +440,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">parentCode</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">父级行政代码</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -448,7 +448,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">areaCode</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">行政代码</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -504,7 +504,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">lng</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">经度</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -512,7 +512,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">lat</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">纬度</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -522,19 +522,19 @@
                 <div class="paragraph"><p><strong>Request-example:</strong></p></div>
                 <div class="listingblock">
                     <div class="content">
-                        <pre><code class="bash">curl -X POST -H 'Content-Type: application/json' -i http://127.0.0.1:8080/updateArea --data '{
-  "id": 837,
-  "level": 809,
-  "parentCode": 875,
-  "areaCode": 157,
-  "zipCode": 95,
-  "cityCode": "79800",
-  "name": "jena.turner",
-  "shortName": "jena.turner",
-  "mergerName": "jena.turner",
-  "pinyin": "liju0e",
-  "lng": 541,
-  "lat": 960
+                        <pre><code class="bash">curl -X POST -H 'Content-Type: application/json' -i http://192.168.31.201:8080/updateArea --data '{
+  "id": 764,
+  "level": 501,
+  "parentCode": "68891",
+  "areaCode": "68891",
+  "zipCode": 810,
+  "cityCode": "68891",
+  "name": "gerry.kessler",
+  "shortName": "gerry.kessler",
+  "mergerName": "gerry.kessler",
+  "pinyin": "eeuxny",
+  "lng": "lieqez",
+  "lat": "yyrmdd"
 }'</code></pre>
                     </div>
                 </div>
@@ -550,7 +550,7 @@
                 <a class="anchor" href="#_1_4_更新中国行政地区第二种方法"></a>
                 <a class="link" href="#_1_4_更新中国行政地区第二种方法">1.4.&nbsp;更新中国行政地区第二种方法</a>
             </h3>
-                <div class="paragraph"><p><strong>URL:</strong><a href="http://127.0.0.1:8080/updateArea2" class="bare">&nbsp;http://127.0.0.1:8080/updateArea2</a>
+                <div class="paragraph"><p><strong>URL:</strong><a href="http://192.168.31.201:8080/updateArea2" class="bare">&nbsp;http://192.168.31.201:8080/updateArea2</a>
                 </p></div>
                 <div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
                 <div class="paragraph"><p><strong>Author:</strong>&nbsp;fish</p></div>
@@ -593,7 +593,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">parentCode</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">父级行政代码</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -601,7 +601,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">areaCode</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">行政代码</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -657,7 +657,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">lng</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">经度</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -665,7 +665,7 @@
 
                     <tr>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">lat</p></td>
-                        <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+                        <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">纬度</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
                         <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -675,19 +675,19 @@
                 <div class="paragraph"><p><strong>Request-example:</strong></p></div>
                 <div class="listingblock">
                     <div class="content">
-                        <pre><code class="bash">curl -X POST -H 'Content-Type: application/json' -i http://127.0.0.1:8080/updateArea2 --data '{
-  "id": 964,
-  "level": 866,
-  "parentCode": 246,
-  "areaCode": 376,
-  "zipCode": 427,
-  "cityCode": "79800",
-  "name": "jena.turner",
-  "shortName": "jena.turner",
-  "mergerName": "jena.turner",
-  "pinyin": "56519x",
-  "lng": 433,
-  "lat": 773
+                        <pre><code class="bash">curl -X POST -H 'Content-Type: application/json' -i http://192.168.31.201:8080/updateArea2 --data '{
+  "id": 201,
+  "level": 725,
+  "parentCode": "68891",
+  "areaCode": "68891",
+  "zipCode": 371,
+  "cityCode": "68891",
+  "name": "gerry.kessler",
+  "shortName": "gerry.kessler",
+  "mergerName": "gerry.kessler",
+  "pinyin": "v7z8lo",
+  "lng": "4sjwx4",
+  "lat": "to6tec"
 }'</code></pre>
                     </div>
                 </div>
@@ -703,7 +703,7 @@
                 <a class="anchor" href="#_1_5_分页查询中国行政地区"></a>
                 <a class="link" href="#_1_5_分页查询中国行政地区">1.5.&nbsp;分页查询中国行政地区</a>
             </h3>
-                <div class="paragraph"><p><strong>URL:</strong><a href="http://127.0.0.1:8080/getByPage" class="bare">&nbsp;http://127.0.0.1:8080/getByPage</a>
+                <div class="paragraph"><p><strong>URL:</strong><a href="http://192.168.31.201:8080/getByPage" class="bare">&nbsp;http://192.168.31.201:8080/getByPage</a>
                 </p></div>
                 <div class="paragraph"><p><strong>Type:</strong>&nbsp;GET</p></div>
                 <div class="paragraph"><p><strong>Author:</strong>&nbsp;fish</p></div>
@@ -712,7 +712,7 @@
                 <div class="paragraph"><p><strong>Request-example:</strong></p></div>
                 <div class="listingblock">
                     <div class="content">
-                        <pre><code class="bash">curl -X GET -i http://127.0.0.1:8080/getByPage</code></pre>
+                        <pre><code class="bash">curl -X GET -i http://192.168.31.201:8080/getByPage</code></pre>
                     </div>
                 </div>
                 <div class="paragraph"><p><strong>Response-example:</strong></p></div>
@@ -727,7 +727,7 @@
                 <a class="anchor" href="#_1_6_根据name模糊查询"></a>
                 <a class="link" href="#_1_6_根据name模糊查询">1.6.&nbsp;根据name模糊查询</a>
             </h3>
-                <div class="paragraph"><p><strong>URL:</strong><a href="http://127.0.0.1:8080/getByNameLike" class="bare">&nbsp;http://127.0.0.1:8080/getByNameLike</a>
+                <div class="paragraph"><p><strong>URL:</strong><a href="http://192.168.31.201:8080/getByNameLike" class="bare">&nbsp;http://192.168.31.201:8080/getByNameLike</a>
                 </p></div>
                 <div class="paragraph"><p><strong>Type:</strong>&nbsp;GET</p></div>
                 <div class="paragraph"><p><strong>Author:</strong>&nbsp;fish</p></div>
@@ -764,7 +764,7 @@
                 <div class="paragraph"><p><strong>Request-example:</strong></p></div>
                 <div class="listingblock">
                     <div class="content">
-                        <pre><code class="bash">curl -X GET -i http://127.0.0.1:8080/getByNameLike?name=jena.turner --data '&jena.turner'</code></pre>
+                        <pre><code class="bash">curl -X GET -i http://192.168.31.201:8080/getByNameLike?name=gerry.kessler --data '&gerry.kessler'</code></pre>
                     </div>
                 </div>
                 <div class="paragraph"><p><strong>Response-example:</strong></p></div>
@@ -779,7 +779,7 @@
                 <a class="anchor" href="#_1_7_删除中国行政地区"></a>
                 <a class="link" href="#_1_7_删除中国行政地区">1.7.&nbsp;删除中国行政地区</a>
             </h3>
-                <div class="paragraph"><p><strong>URL:</strong><a href="http://127.0.0.1:8080/deleteArea" class="bare">&nbsp;http://127.0.0.1:8080/deleteArea</a>
+                <div class="paragraph"><p><strong>URL:</strong><a href="http://192.168.31.201:8080/deleteArea" class="bare">&nbsp;http://192.168.31.201:8080/deleteArea</a>
                 </p></div>
                 <div class="paragraph"><p><strong>Type:</strong>&nbsp;GET</p></div>
                 <div class="paragraph"><p><strong>Author:</strong>&nbsp;fish</p></div>
@@ -816,7 +816,7 @@
                 <div class="paragraph"><p><strong>Request-example:</strong></p></div>
                 <div class="listingblock">
                     <div class="content">
-                        <pre><code class="bash">curl -X GET -i http://127.0.0.1:8080/deleteArea?id=752 --data '&752'</code></pre>
+                        <pre><code class="bash">curl -X GET -i http://192.168.31.201:8080/deleteArea?id=533 --data '&533'</code></pre>
                     </div>
                 </div>
                 <div class="paragraph"><p><strong>Response-example:</strong></p></div>
@@ -831,7 +831,7 @@
                 <a class="anchor" href="#_1_8_删除全部中国行政地区"></a>
                 <a class="link" href="#_1_8_删除全部中国行政地区">1.8.&nbsp;删除全部中国行政地区</a>
             </h3>
-                <div class="paragraph"><p><strong>URL:</strong><a href="http://127.0.0.1:8080/deleteAll" class="bare">&nbsp;http://127.0.0.1:8080/deleteAll</a>
+                <div class="paragraph"><p><strong>URL:</strong><a href="http://192.168.31.201:8080/deleteAll" class="bare">&nbsp;http://192.168.31.201:8080/deleteAll</a>
                 </p></div>
                 <div class="paragraph"><p><strong>Type:</strong>&nbsp;GET</p></div>
                 <div class="paragraph"><p><strong>Author:</strong>&nbsp;fish</p></div>
@@ -840,7 +840,7 @@
                 <div class="paragraph"><p><strong>Request-example:</strong></p></div>
                 <div class="listingblock">
                     <div class="content">
-                        <pre><code class="bash">curl -X GET -i http://127.0.0.1:8080/deleteAll</code></pre>
+                        <pre><code class="bash">curl -X GET -i http://192.168.31.201:8080/deleteAll</code></pre>
                     </div>
                 </div>
                 <div class="paragraph"><p><strong>Response-example:</strong></p></div>
@@ -852,12 +852,12 @@
             </div>
         </div>
     </div>
-    <footer class="page-footer"><span class="copyright">Generated by smart-doc at 2022-09-04 20:59:45</span><span
+    <footer class="page-footer"><span class="copyright">Generated by smart-doc at 2022-10-02 20:23:10</span><span
             class="footer-modification">Suggestions,contact,support and error reporting on<a
             href="https://gitee.com/smart-doc-team/smart-doc" target="_blank">&nbsp;Gitee</a>&nbsp;or<a
             href="https://github.com/smart-doc-group/smart-doc.git" target="_blank">&nbsp;Github</a></span></footer>
 </div>
-<script src="search.js?v=1662296385254"></script>
+<script src="search.js?v=1664713390547"></script>
 <script>
     $(function () {
         const Accordion = function (el, multiple) {
