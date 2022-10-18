@@ -57,6 +57,7 @@
     <modules>
         <module>elasticsearch</module>
         <module>feign</module>
+        <module>logback</module>
         <module>minio</module>
         <module>mongodb</module>
         <module>mybatis</module>

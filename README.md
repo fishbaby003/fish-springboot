@@ -30,6 +30,9 @@
     - [SpringBoot单独集成feign](feign/README.md)
     
     使用springboot、feign技术
+    - [SpringBoot集成logback异步日志](logback/README.md)
+    
+    使用springboot、logback技术
     - [SpringBoot集成分布式存储minio](minio/README.md)
     
     使用springboot、mybatis、mysql、minio、knife4j技术
