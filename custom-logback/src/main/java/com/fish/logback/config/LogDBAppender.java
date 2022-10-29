@@ -11,6 +11,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
+/**
+ * @author fish
+ */
 @Configuration
 public class LogDBAppender extends DBAppenderBase<ILoggingEvent> {
 

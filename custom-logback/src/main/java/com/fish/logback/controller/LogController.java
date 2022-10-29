@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class LogController {
-    private static Logger logger= LoggerFactory.getLogger("LogController");
+    private static Logger logger= LoggerFactory.getLogger(LogController.class);
     @GetMapping("/log")
     public String testLog(@RequestParam("str") String str){
         logger.info("info");
         logger.debug("debug");
         logger.warn("warn");
-        logger.error("error");
-        logger.error("异常："+str);
+//        logger.error("error");
+        logger.error("- 异常："+str);
         return JSONObject.toJSONString(logger);
     }
 }
