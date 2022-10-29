@@ -55,6 +55,7 @@
     </dependencies>
 
     <modules>
+        <module>custom-logback</module>
         <module>elasticsearch</module>
         <module>feign</module>
         <module>logback</module>

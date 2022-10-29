@@ -24,6 +24,9 @@
 > Springboot demos 持续更新中... @fish
 
 - Springboot demos
+    - [SpringBoot集成logback异步日志并存入自定义数据库](custom-logback/README.md)
+    
+    使用springboot、logback技术，支持db2、h2、hsqldb、mssql、mysql、oracle、postgresql、sqllite、sybasesqlAnywhere
     - [SpringBoot集成elasticsearch](elasticsearch/README.md)
     
     使用springboot、jpa、mysql、elasticsearch技术

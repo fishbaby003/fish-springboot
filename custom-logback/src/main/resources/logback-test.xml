@@ -54,7 +54,8 @@
     </appender>
 
     <!--连接数据库配置-->
-    <appender name="db_classic_mysql_pool" class="ch.qos.logback.classic.db.DBAppender">
+    <!--连接数据库配置-->
+    <appender name="db_classic_mysql_pool" class="com.fish.logback.config.LogDBAppender">
         <connectionSource class="ch.qos.logback.core.db.DataSourceConnectionSource">
             <dataSource class="org.apache.commons.dbcp.BasicDataSource">
                 <driverClassName>com.mysql.cj.jdbc.Driver</driverClassName>
@@ -71,12 +72,34 @@
     <logger name="java.sql.Statement" level="DEBUG"/>
     <logger name="java.sql.PreparedStatement" level="DEBUG"/>
 
+    <!--配置异步日志-->
+    <appender name="STDOUT_ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="stdout"/>
+    </appender>
+    <appender name="FILE_ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="application_file"/>
+    </appender>
+    <appender name="FILEWARN_ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="error_file"/>
+    </appender>
+    <appender name="FILEERROR_ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="db_classic_mysql_pool"/>
+    </appender>
+
     <!-- 日志输出级别 -->
     <root level="WARN">
+        <appender-ref ref="STDOUT_ASYNC" />
+        <appender-ref ref="FILE_ASYNC" />
+        <appender-ref ref="FILEWARN_ASYNC"/>
+        <appender-ref ref="FILEERROR_ASYNC" />
+    </root>
+
+    <!-- 日志输出级别 -->
+   <!-- <root level="WARN">
         <appender-ref ref="stdout" />
         <appender-ref ref="application_file" />
         <appender-ref ref="error_file"/>
         <appender-ref ref="db_classic_mysql_pool" />
-    </root>
+    </root>-->
 
 </configuration>
