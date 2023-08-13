@@ -25,7 +25,7 @@ public class Knife4jConfiguration {
         return new Docket(DocumentationType.SWAGGER_2)
                 .useDefaultResponseMessages(false)
                 .apiInfo(apiInfo())
-                .select()                .apis(RequestHandlerSelectors.basePackage("com.fish.wechat.controller"))
+                .select()                .apis(RequestHandlerSelectors.basePackage("com.fish.bosai.controller"))
                 .paths(PathSelectors.any())
                 .build();
 
