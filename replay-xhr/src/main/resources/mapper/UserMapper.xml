@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fish.replay.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.fish.replay.entity.User">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="password" jdbcType="VARCHAR" property="passWord"/>
+        <result column="real_name" jdbcType="VARCHAR" property="realName"/>
+    </resultMap>
+    <select id="sel" resultMap="BaseResultMap">
+        select * from t_user where id = #{id}
+    </select>
+    <select id="getRepUserName" resultType="com.fish.replay.entity.User">
+     SELECT
+        u.*
+    FROM
+        t_user u join reUserName r on r.user_name=u.user_name
+    </select>
+    <update id="createTempTable">
+    CREATE TEMPORARY TABLE reUserNameNew AS
+    (
+        SELECT user_name FROM t_user  group by user_name having count(user_name)>#{num}
+    )
+    </update>
+    <update id="dropTable">
+    drop table if exists reUserNameNew
+</update>
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fish.mybatis.mapper.LogMapper">
+    <resultMap id="BaseResultMap" type="com.fish.mybatis.entity.Log">
+        <result column="request_id" jdbcType="VARCHAR" property="requestId"/>
+        <result column="api_group_id" jdbcType="VARCHAR" property="apiGroupId"/>
+        <result column="api_group_name" jdbcType="VARCHAR" property="apiGroupName"/>
+        <result column="api_id" jdbcType="VARCHAR" property="apiId"/>
+        <result column="api_name" jdbcType="VARCHAR" property="apiName"/>
+        <result column="api_stage_id" jdbcType="VARCHAR" property="apiStageId"/>
+        <result column="api_stage_name" jdbcType="VARCHAR" property="apiStageName"/>
+        <result column="http_method" jdbcType="VARCHAR" property="httpMethod"/>
+        <result column="path" jdbcType="VARCHAR" property="path"/>
+        <result column="domain" jdbcType="VARCHAR" property="domain"/>
+        <result column="status_code" jdbcType="VARCHAR" property="statusCode"/>
+        <result column="project_id" jdbcType="VARCHAR" property="projectId"/>
+        <result column="app_name" jdbcType="VARCHAR" property="appName"/>
+        <result column="client_ip" jdbcType="VARCHAR" property="clientIp"/>
+        <result column="provider_ali_id" jdbcType="VARCHAR" property="providerAliId"/>
+        <result column="region" jdbcType="VARCHAR" property="region"/>
+        <result column="service_latency" jdbcType="INTEGER" property="serviceLatency"/>
+        <result column="request_protocol" jdbcType="VARCHAR" property="requestProtocol"/>
+        <result column="request_handle_time" jdbcType="TIMESTAMP" property="requestHandleTime"/>
+    </resultMap>
+    <select id="getById" resultMap="BaseResultMap">
+        select * from t_log where request_id = #{id}
+        </select>
+    <select id="getCount" resultType="int">
+        select count(*) from t_log
+        </select>
+    <select id="getByAll" resultMap="BaseResultMap">
+     SELECT
+        u.*
+    FROM
+        t_log u
+    </select>
+    <select id="queryLogsBySql" parameterType="map" resultMap="BaseResultMap">
+        select * from t_log order by request_id desc limit #{currIndex} , #{pageSize}
+    </select>
+</mapper>
