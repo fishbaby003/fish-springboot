@@ -55,14 +55,17 @@
     </dependencies>
 
     <modules>
+        <module>betting</module>
         <module>custom-logback</module>
         <module>elasticsearch</module>
         <module>feign</module>
+        <module>leetcode</module>
         <module>logback</module>
         <module>minio</module>
         <module>mongodb</module>
         <module>mybatis</module>
         <module>redis</module>
+        <module>replay-xhr</module>
         <module>sharding-jdbc</module>
     </modules>
     <packaging>pom</packaging>
