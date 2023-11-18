@@ -95,6 +95,12 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>cn.shuibo</groupId>
+			<artifactId>rsa-encrypt-body-spring-boot</artifactId>
+			<version>1.0.1.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 
 	<!--管理springcloud版本，引入openfeign时不用添加version-->
