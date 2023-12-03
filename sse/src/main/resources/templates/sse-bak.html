@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SseEmitter</title>
+</head>
+<body>
+<button onclick="closeSse()">关闭连接</button>
+<div id="result"></div>
+<div id="message"></div>
+
+<!--<script>
+    // 连接服务器
+    var sseSource = new EventSource("http://localhost:5010/sse/connect");
+
+    // 连接打开
+    sseSource.onopen = function () {
+        console.log("连接打开");
+    }
+
+    // 连接错误
+    sseSource.onerror = function (err) {
+        console.log("连接错误:", err);
+    }
+
+    // 接收到数据
+    sseSource.onmessage = function (event) {
+        console.log("接收到数据:", event);
+        handleReceiveData(JSON.parse(event.data))
+    }
+
+    // 关闭链接
+    function handleCloseSse() {
+        sseSource.close()
+    }
+
+    // 处理服务器返回的数据
+    function handleReceiveData(data) {
+        let div = document.createElement('div');
+        div.innerHTML = data.data;
+        document.getElementById('result').appendChild(div);
+    }
+
+    // 通过http发送消息
+    function sendMessage() {
+        const message = document.querySelector("#message")
+        const data = {
+            data: message.value
+        }
+
+        message.value = ''
+
+        fetch('http://localhost:5010/sse/sendMessage', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(data)
+        })
+    }
+</script>-->
+</body>
+</html>
