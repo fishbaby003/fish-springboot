@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+加密传后端，后端解密
+<button id="jiami" onclick="tijiao()">加密传后端</button>
+<button id="getreq" onclick="getreq()">get请求加密传后端</button>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jsencrypt/3.0.0-rc.1/jsencrypt.js"></script>
+<script>    var PUBLIC_KEY = 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxZzYuEeG3ZhDDvd0n2VH9YwD+elDIWb2kffQUJJ6z5Q24VtZ1+WTlJWHozI5EGf+B6LVmSOHTGUXmyvcCLLQXm5U6/h5zUPCrdwb1BKliN0dqTcX2NStWtZJ9RhsRxKOL8XRYZNCKjlrX4FhLu7pkne5qJMs/tro9Yrex5hti5zDmuGeE7EQQds69YRZ6PDJS+G6tNWAoGko0p/P8AxOsbYxROFEg+k3nMvlSoczUK63Cemk7v+ZIWJt/EuP0FbpGd4OhBg0ybXURnET2BCIQM7Mv2qbCPjgJDYvKXPeK6jlCaR5f5Iewtqlsu1OExndqWj0yT6nAijU5NOvxhOE6wIDAQAB';
+
+/**
+ * 加密方法
+ * @returns {PromiseLike<ArrayBuffer>}
+ * @constructor
+ */
+function RSA_encryption(jsonData) {
+    var encrypt = new JSEncrypt();
+    encrypt.setPublicKey('-----BEGIN PUBLIC KEY-----' + PUBLIC_KEY + '-----END PUBLIC KEY-----');
+    var encrypted = encrypt.encrypt(JSON.stringify(jsonData));
+    console.log('加密前数据:%o', jsonData);
+    console.log('加密后数据:%o', encrypted);
+    return encrypted;
+}
+
+/**
+ * 提交方法
+ */
+function tijiao() {
+    /*var str = {
+        "name":"1223334",
+        "password":"asd",
+        age:1
+    };*/
+    var str = {"addr":"addr","age":18,"name":"fish"};
+    $.ajax({
+        url: "/user/decryption",
+        type : "POST",
+        contentType: "application/json;charset=utf-8",
+        data : RSA_encryption(str) ,
+        // data : JSON.stringify(RSA_encryption(str)) ,
+        // data : JSON.stringify(str) ,
+        success : function(data) {
+            alert(data);
+        }
+    })
+}
+
+/**
+ * 不支持get请求传参
+ */
+function getreq() {
+    var str = {"age":18,"name":"fish"};
+    $.ajax({
+        url: "/user/getData",
+        type : "GET",
+        contentType: "application/json;charset=utf-8",
+        data : RSA_encryption(str) ,
+        dataType: 'json',
+        success : function(data) {
+            alert(data);
+        }
+    })
+}
+
+</script>
+</body>
+</html>
