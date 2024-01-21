@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.example.demo.protobuf";
+option java_outer_classname = "MessageUser";
+
+message MessageUserLogin {
+    string access_token = 1;
+    string username = 2;
+}

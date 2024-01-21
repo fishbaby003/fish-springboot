@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_package = "com.fish.protobuf.entity";
+option java_outer_classname = "MessageUserLogin";
+
+message MessageUserLoginRequest {
+    string username = 1;
+    string password = 2;
+}
+
+message MessageUserLoginResponse {
+    string access_token = 1;
+    string username = 2;
+}
